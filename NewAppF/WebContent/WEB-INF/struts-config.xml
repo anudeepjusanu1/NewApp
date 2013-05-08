@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="fileupload" type="com.recapp.beans.FileUpLoad.java"></form-bean>
+	</form-beans>
+
+	<action-mappings>
+
+		<action path="/fileload" type="com.recapp.action.UploadFileAction.java" name="fileupload"
+			input="/fileupload.do">
+			<forward name="success" path="success.jsp"></forward>
+
+		</action>
+	</action-mappings>
+	<controller>
+	</controller>
+</struts-config>
